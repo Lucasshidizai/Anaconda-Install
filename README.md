@@ -172,6 +172,14 @@
 
 你现在已经成功安装了 Anaconda。下面是一些基础命令，用于创建虚拟环境和安装包。
 
+- **查看已安装的 Conda 版本**：
+
+在任何时候，你可以检查 Conda 的版本，以确保你正在使用正确的版本。打开命令行（如 `Anaconda Prompt`、`CMD` 或 `PowerShell`），然后输入：
+
+  ```bash
+  conda --version
+  ```
+
 - **创建虚拟环境**：
 
   ```bash
