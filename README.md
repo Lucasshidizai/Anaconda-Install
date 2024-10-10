@@ -182,26 +182,39 @@
 
 - **创建虚拟环境**：
 
+使用虚拟环境可以隔离不同项目所依赖的包，避免依赖冲突。创建一个新的 Conda 虚拟环境并指定 Python 版本（可以不指定，默认使用 Conda 自带的 Python 版本）：
+
   ```bash
   conda create -n myenv python=3.9
   ```
 
-  这会创建一个名为 `myenv` 的虚拟环境，并安装 Python 3.9。
+  - `myenv` 是虚拟环境的名字，可以根据你的需求进行更改。
+  - `python=3.9` 指定安装 Python 3.9 版本，也可以根据需要选择其他版本。
 
-- **激活环境**：
+- **激活虚拟环境**：
 
+  在创建虚拟环境之后，你需要激活它才能使用该环境中的包和 Python 版本。使用以下命令激活环境：
+  
   ```bash
   conda activate myenv
   ```
-
-  激活该环境后，你可以在其中安装和管理包。
+  
+  激活后，命令行提示符通常会显示当前激活的环境名称（例如 `(myenv)`），表示你现在处于该虚拟环境中。
 
 - **安装包**：
-  在激活的虚拟环境中，你可以使用 `conda install` 或 `pip install` 安装所需的库，例如安装 NumPy：
+在虚拟环境中，你可以使用 `conda install` 或 `pip install` 来安装包。  
+使用 `conda install` 来安装包（如安装 `numpy`）：
 
   ```bash
   conda install numpy
   ```
+
+这会从 Conda 的官方仓库下载并安装该包。如果某个包在 Conda 仓库中找不到，你可以使用 `pip install`：
+
+  ```bash
+  pip install some_package
+  ```
+
 
 - **退出虚拟环境**：
   完成工作后，退出虚拟环境：
