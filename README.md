@@ -202,23 +202,88 @@
   激活后，命令行提示符通常会显示当前激活的环境名称（例如 `(myenv)`），表示你现在处于该虚拟环境中。
 
 - **安装包**：
-在虚拟环境中，你可以使用 `conda install` 或 `pip install` 来安装包。  
-使用 `conda install` 来安装包（如安装 `numpy`）：
+
+  在虚拟环境中，你可以使用 `conda install` 或 `pip install` 来安装包。  
+  使用 `conda install` 来安装包（如安装 `numpy`）：
 
   ```bash
   conda install numpy
   ```
 
-这会从 Conda 的官方仓库下载并安装该包。如果某个包在 Conda 仓库中找不到，你可以使用 `pip install`：
+  这会从 Conda 的官方仓库下载并安装该包。如果某个包在 Conda 仓库中找不到，你可以使用 `pip install`：
 
   ```bash
   pip install some_package
   ```
+  
+- **安装特定版本的包**：
 
+  如果你需要安装某个包的特定版本，可以使用以下命令：
+
+  ```bash
+  conda install numpy=1.19
+  ```
+  
+- **查看已安装的包**：
+
+  要查看当前虚拟环境中安装了哪些包，可以使用以下命令：
+
+  ```bash
+  conda list
+  ```
+
+- **更新包**：
+
+  如果想更新已安装的包到最新版本，可以使用 `conda update`。例如，更新 `numpy`：
+  
+  ```bash
+  conda update numpy
+  ```
+  
+  Conda 会检查是否有新版本，并提供更新提示。
+
+- **删除包**：
+
+  如果想从环境中删除某个包，可以使用 `conda remove` 命令。例如，删除 `numpy`：
+  
+  ```bash
+  conda remove numpy
+  ```
+
+- **查看已创建的虚拟环境**：
+
+  要查看所有已创建的虚拟环境，可以使用以下命令：
+  
+  ```bash
+  conda env list
+  ```
+  
+  这会列出所有 Conda 管理的虚拟环境，以及它们对应的路径。
+
+- **切换环境**：
+
+  要切换到另一个已经创建的虚拟环境，只需使用 `conda activate`，例如：
+  
+  ```bash
+  conda activate another_env
+  ```
+  
+  这会切换到名为 `another_env` 的环境。
 
 - **退出虚拟环境**：
-  完成工作后，退出虚拟环境：
 
+  如果你完成了当前环境中的操作，可以使用以下命令退出虚拟环境，返回到默认的 `base` 环境或全局环境：
+  
   ```bash
   conda deactivate
   ```
+
+- **删除虚拟环境**：
+
+如果你不再需要某个虚拟环境，可以使用 `conda env remove` 命令来删除它：
+
+```bash
+conda env remove -n myenv
+```
+
+`myenv` 是你想要删除的环境的名字。删除后，该环境及其包都会被移除。
