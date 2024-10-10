@@ -280,10 +280,10 @@
 
 - **删除虚拟环境**：
 
-如果你不再需要某个虚拟环境，可以使用 `conda env remove` 命令来删除它：
-
-```bash
-conda env remove -n myenv
-```
-
-`myenv` 是你想要删除的环境的名字。删除后，该环境及其包都会被移除。
+  如果你不再需要某个虚拟环境，可以使用 `conda env remove` 命令来删除它：
+  
+  ```bash
+  conda env remove -n myenv
+  ```
+  
+  `myenv` 是你想要删除的环境的名字。删除后，该环境及其包都会被移除。
